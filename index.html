@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Jihye's Portfolio</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/icon">
+    <!-- fullpage -->
+    <link rel="stylesheet" href="css/jquery.fullpage.css" type="text/css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.css" type="text/css">
+    <!-- book -->
+    <link rel="stylesheet" href="css/default.css" type="text/css">
+    <link rel="stylesheet" href="css/bookblock.css" type="text/css">
+    <link rel="stylesheet" href="css/demo4.css" type="text/css">
+
+    <!-- 사용자 정의 css -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!-- mail -->
+    <link rel="stylesheet" href="css/pure-min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="css/email.css" type="text/css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/form-submission-handler.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+    <canvas></canvas>
+    <div class="cursor"></div>
+    <div class="wrap">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo_box1_w.png" alt="logo box" class="logo_box1">
+                    <img src="img/logo_box2_w.png" alt="logo box" class="logo_box2">
+                    <img src="img/logo1_w.png" alt="logo" class="logo_img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#Intro">Intro</a></li>
+                    <li><a href="#Profile">Profile</a></li>
+                    <li><a href="#Web">Web Portfolio</a></li>
+                    <li><a href="#Editable">Editable Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li class="cancle"><a href="#"><img src="img/close_w.png" alt="닫기"></a></li>
+                </ul>
+            </nav>
+            <!-- 햄버거 메뉴 버튼(모바일) -->
+            <div class="mo_btn">
+                <a href="#">
+                    <img src="img/menu_btn.png" alt="menu_btn">
+                </a>
+            </div>
+            <!-- 모바일에서 햄버거 메뉴 버튼 클릭하면 나타나는 메뉴 -->
+            <div class="mo_nav">
+                <div class="mo_logo">
+                    <a href="index.html">
+                        <img src="img/logo_box1_w.png" alt="logo box" class="logo_box1">
+                        <img src="img/logo_box2_w.png" alt="logo box" class="logo_box2">
+                        <img src="img/logo1_w.png" alt="logo" class="logo_img">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#Intro">Intro</a></li>
+                        <li><a href="#Profile">Profile</a></li>
+                        <li><a href="#Web">Web Portfolio</a></li>
+                        <li><a href="#Editable">Editable Portfolio</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <li class="cancle"><a href="#"><img src="img/close_w.png" alt="닫기"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="fullpage">
+            <section class="section s1">
+                <p>‘ Let's always do our best and give thanks~! ’</p>
+                <h2>
+                    < 안녕하세요. 신입 웹퍼블리셔 <span>“권지혜”</span> 입니다.><br>
+                        { Hi. I’m Newcomer Web - Publisher Ji Hye Kwon. }
+                </h2>
+            </section>
+            <section class="section s2">
+                <h1>[ Profile ]</h1>
+                <div class="box">
+                    <div class="edu">
+                        <h3>디자인 교육</h3>
+                        <div class="edu_box">
+                            <div>스마트 웹콘텐츠 제작 - UI/UX 웹디자인 & 웹퍼블리싱 과정</div>
+                            <div>교육기간 : 2021. 04. 05 ~ 2021. 09. 14</div>
+                            <div>교육기관 : 연희직업전문학교</div>
+                            <div class="edu_title">*** 교육 능력 단위 ***</div>
+                            <div>
+                                <div>UI/UX 요구분석</div>
+                                <div>UI/UX 콘셉트 기획</div>
+                            </div>
+                            <div>
+                                <div>UI 아키텍쳐 설계</div>
+                                <div>UI 디자인</div>
+                            </div>
+                            <div>
+                                <div>UI 구현</div>
+                                <div>UI 테스트</div>
+                            </div>
+                            <div>
+                                <div>스마트문화앱 구현</div>
+                                <div>애플리케이션 배포</div>
+                            </div>
+                            <div>
+                                <div>포트폴리오 제작</div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <h3>My Skills</h3>
+                        <div class="skill_box">
+                            <div class="container">
+                                <p class="wide">PHOTOSHOP</p>
+                                <div class="back skillbar clearfix" data-percent="95%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%;">95%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">ILLUSTRATOR</p>
+                                <div class="back skillbar clearfix" data-percent="90%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%;">90%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">HTML5+CSS3</p>
+                                <div class="back skillbar clearfix" data-percent="90%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%">90%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">JAVASCRIPT<br>& JQUERY</p>
+                                <div class="back skillbar clearfix" data-percent="70%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%">70%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">PHP</p>
+                                <div class="back skillbar clearfix" data-percent="75%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%">75%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">GNUBOARD</p>
+                                <div class="back skillbar clearfix" data-percent="75%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%">75%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">VUE.JS</p>
+                                <div class="back skillbar clearfix" data-percent="60%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%">60%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">REACT</p>
+                                <div class="back skillbar clearfix" data-percent="40%">
+                                    <div class="skill skillbar-bar" style="height:2vw;width:0%">40%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section s3">
+                <h1>[ Web Portfolio ]</h1>
+                <div class="box">
+                    <div class="book bb-custom-wrapper">
+                        <div id="bb-bookblock" class="bb-bookblock">
+                            <div class="bb-item">
+                                <h3>노엘로힐즈</h3>
+                                <div class="bb-custom-side">
+                                    <div class="book_img">
+                                        <img src="img/mockup1.png" alt="image01">
+                                    </div>
+                                </div>
+                                <div class="bb-custom-side">
+                                    <div class="book_des">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;bxSlider</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #ffffff;"></p><span>#ffffff</span>
+                                                <p style="background: #f3a821;" class="blank"></p>
+                                                <span>#f3a821</span>
+                                                <p style="background: #5c5b58;" class="blank"></p>
+                                                <span>#5c5b58</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<img src="img/godik_navy.png" alt="나눔고딕"></div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div>
+                                            <div>:&nbsp;&nbsp;1주일</div>
+                                        </div>
+                                        <div class="book_btn">
+                                            <a href="https://noelohills.com/">Original</a>
+                                            <a href="http://smilecherry.dothome.co.kr">PC Renewal</a>
+                                            <!-- <a href="http://smilecherry.dothome.co.kr">Mobile</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--bb-item-->
+
+                            <div class="bb-item">
+                                <h3>스타일난다</h3>
+                                <div class="bb-custom-side">
+                                    <div class="book_img"><img src="img/mockup2.png" alt="image02" /></div>
+                                </div>
+                                <div class="bb-custom-side">
+                                    <div class="book_des">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;php + splideSlider + bxSlider + slickSlider</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #ffffff;"></p><span>#ffffff</span>
+                                                <p style="background: #222222;" class="blank"></p><span>#222222</span>
+                                                <p style="background: #999999;" class="blank"></p><span>#999999</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<img src="img/notsans_navy.png" alt="notosans"></div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div>
+                                            <div>:&nbsp;&nbsp;2주일</div>
+                                        </div>
+                                        <div class="book_btn">
+                                            <a href="https://stylenanda.com/">Original</a>
+                                            <a href="http://smilecherry.dothome.co.kr/stylenanda/">PC Renewal</a>
+                                            <a href="http://smilecherry.dothome.co.kr/stylenanda/sub_new.php">Sub
+                                                page</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bb-item">
+                                <h3>핑크스터프</h3>
+                                <div class="bb-custom-side">
+                                    <div class="book_img"><img src="img/mockup3.png" alt="image03" /></div>
+                                </div>
+                                <div class="bb-custom-side">
+                                    <div class="book_des">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 버전 + 태블릿 버전 + 모바일 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;Bootstrap + jquery-easing + mediaquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #f160ad;"></p><span>#f160ad</span>
+                                                <p style="background: #ffffff;" class="blank"></p><span>#ffffff</span>
+                                                <p style="background: #ecd2b2;" class="blank"></p><span>#ecd2b2</span>
+                                                <p style="background: #e7d859;" class="blank"></p><span>#e7d859</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;
+                                                <img src="img/onestore_navy.png" alt="원스토어모바일체">&nbsp;+&nbsp;<img
+                                                    src="img/notsans_navy.png" alt="notosans">
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div><br>
+                                            <div>:&nbsp;&nbsp;1주일</div>
+                                        </div>
+                                        <div class="book_btn">
+                                            <a href="https://www.pinkstuff.co.kr/">Original</a>
+                                            <a href="http://smilecherry.dothome.co.kr/pinkstuff/">PC Renewal</a>
+                                            <a href="http://smilecherry.dothome.co.kr/pinkstuff/">Mobile</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bb-item">
+                                <h3>던킨도너츠</h3>
+                                <div class="bb-custom-side">
+                                    <div class="book_img"><img src="img/mockup4.png" alt="image04" /></div>
+                                </div>
+                                <div class="bb-custom-side">
+                                    <div class="book_des">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;모바일 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery.mobile</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;swiperSlider</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #372317;"></p><span>#372317</span>
+                                                <p style="background: #ffffff;" class="blank"></p>
+                                                <span>#ffffff</span>
+                                                <p style="background: #c1ae96;" class="blank"></p>
+                                                <span>#c1ae96</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<img src="img/jarful_navy.png" alt="잘풀리는오늘"></div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div><br>
+                                            <div>:&nbsp;&nbsp;1주일</div>
+                                        </div>
+                                        <div class="book_btn">
+                                            <a href="http://www.dunkindonuts.co.kr/">Original</a>
+                                            <!-- <a href="http://smilecherry.dothome.co.kr/pinkstuff/">PC Renewal</a> -->
+                                            <a href="https://jihye-kwon.github.io/dunkin/">Mobile</a>
+                                        </div>
+                                    </div><!-- book-des-detail -->
+                                </div>
+                            </div>
+                            <div class="bb-item">
+                                <h3>더카페</h3>
+                                <div class="bb-custom-side">
+                                    <div class="book_img"><img src="img/mockup5.png" alt="image05" /></div>
+                                </div>
+                                <div class="bb-custom-side">
+                                    <div class="book_des">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 번전 + 노트북 버전 + 태블릿 버전 + 모바일 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;fullpage</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #412a24;"></p><span>#412a24</span>
+                                                <p style="background: #ffffff;" class="blank"></p>
+                                                <span>#ffffff</span>
+                                                <p style="background: #fdc53e;" class="blank"></p>
+                                                <span>#fdc53e</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<img src="img/jarful_navy.png"
+                                                    alt="잘풀리는오늘">&nbsp;+&nbsp;<img src="img/notsans_navy.png"
+                                                    alt="notosans">
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div><br>
+                                            <div>:&nbsp;&nbsp;3주일</div>
+                                        </div>
+                                        <div class="book_btn">
+                                            <a href="http://www.thecaffe.co.kr/">Original</a>
+                                            <a href="https://jihye-kwon.github.io/thecaffe/">PC Renewal</a>
+                                            <a href="https://jihye-kwon.github.io/thecaffe/">Mobile</a>
+                                        </div>
+                                    </div><!-- book-des-detail -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <nav>
+                            <a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
+                            <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+                            <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+                            <a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section class="section s4">
+                <h1>[ Editable Portfolio ] <span>&(plz).click!!({});</span></h1>
+                <div class="box">
+                    <div class="grid_img">
+                        <div>
+                            <div class="container1">
+                                <div class="grid_01"><a href="img/editable1.png"><img src="img/editable1.png"
+                                            alt="북커버"></a></div>
+                                <div class="grid_02"><a href="img/editable2.png"><img src="img/editable2.png"
+                                            alt="3단 리플렛"></a>
+                                </div>
+                                <div class="grid_03"><a href="img/editable3.png"><img src="img/editable3.png"
+                                            alt="엠블럼"></a></div>
+                                <div class="grid_04"><a href="img/editable4.png"><img src="img/editable4.png"
+                                            alt="배너"></a></div>
+                                <div class="grid_05"><a href="img/editable5.png"><img src="img/editable5.png"
+                                            alt="포스터"></a></div>
+                                <div class="grid_06"><a href="img/editable6.png"><img src="img/editable6.png"
+                                            alt="포스터"></a></div>
+                                <div class="grid_07"><a href="img/editable7.png"><img src="img/editable7.png"
+                                            alt="CD 케이스"></a></div>
+                                <div class="grid_08"><a href="img/editable8.png"><img src="img/editable8.png"
+                                            alt="배너"></a></div>
+                                <div class="grid_09"><a href="img/editable9.png"><img src="img/editable9.png"
+                                            alt="배너"></a></div>
+                                <div class="grid_10"><a href="img/editable10.png"><img src="img/editable10.png"
+                                            alt="배너"></a></div>
+                                <div class="grid_11"><a href="img/editable11.png"><img src="img/editable11.png"
+                                            alt="배너"></a></div>
+                                <div class="grid_12"><a href="img/editable12.png"><img src="img/editable12.png"
+                                            alt="배너"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section s5">
+                <h1>[ Contact Me ]</h1>
+                <div class="box">
+                    <p>안녕하세요. 신입 웹퍼블리셔 권지혜 입니다.<br>
+                        제게 코딩이란 또다른 꿈을 꿀수 있게 해주는 목표가 되었고, 더 잘하고 싶고, 더 알아가고 싶은 일이 되었습니다.<br>
+                        항상 긍정적인 자세로 감사하며 최선을 다하자는 각오로 임하며, 동료들에게 도움이 되도록 발전하겠습니다.<br>
+                        제 작업이 마음에 드셨거나, 문의사항이 있으시다면 언제든 편하게 연락주시기 바랍니다.
+                    </p>
+                    <div class="con_wrap">
+                        <div class="con_left">
+                            <div class="con_left_text">
+                                <p class="thanku">Thank you for visiting<br> my website <br>and reading to the end.</p>
+                            </div>
+                            <div class="con_left_text2">
+                                <p><a href="https://open.kakao.com/o/sZuILUxd">카카오톡 오픈채팅 바로가기</a></p>
+                                <p>E-MAIL : jihye03271004@gmail.com</p>
+                                <p>PORTPOLIO : </p>
+                            </div>
+                            <div class="con_left_map">
+
+                            </div>
+                        </div>
+                        <div class="con_right">
+                            <form class="gform pure-form pure-form-stacked" method="POST"
+                                data-email="jihye03271004@gmail.com"
+                                action="https://script.google.com/macros/s/AKfycbxUbCmMtn3K-QbVvO-hAGb38PeV5t1MKAfPynZBDql2xvCBXrJgDM1FT038SNcPdvzZ/exec">
+                                <!-- change the form action to your script url -->
+
+                                <div class="form-elements">
+                                    <fieldset class="pure-group">
+                                        <label for="name">이름(Name) : </label>
+                                        <input id="name" name="name" placeholder="What your Mom calls you" />
+                                    </fieldset>
+
+                                    <fieldset class="pure-group">
+                                        <label for="message">내용(Message) : </label>
+                                        <textarea id="message" name="message" rows="10"
+                                            placeholder="Tell us what's on your mind..."></textarea>
+                                    </fieldset>
+
+                                    <fieldset class="pure-group">
+                                        <label for="email">이메일(E-mail) :</label>
+                                        <input id="email" name="email" type="email" value="" required
+                                            placeholder="jihye03271004@gmail.com" />
+                                    </fieldset>
+
+                                    <fieldset class="pure-group">
+                                        <label for="color">Favourite Color: </label>
+                                        <input id="color" name="color" placeholder="green" />
+                                    </fieldset>
+
+                                    <fieldset class="pure-group honeypot-field">
+                                        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a
+                                            hidden text field; must be
+                                            empty to submit the form! Otherwise, we assume the user is a spam
+                                            bot.</label>
+                                        <input id="honeypot" type="text" name="honeypot" value="" />
+                                    </fieldset>
+
+                                    <button class="button-success pure-button button-xlarge" onclick="return check();">
+                                        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                                </div>
+
+                                <!-- Customise the Thankyou Message People See when they submit the form: -->
+                                <div class="thankyou_message" style="display:none;">
+                                    <h2><em>Thanks</em> for contacting me!
+                                        I will get back to you soon!</h2>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+
+        </footer>
+    </div><!-- wrap end -->
+    <!-- popup gallery -->
+    <div class="popup">
+        <div class="container2"></div>
+        <div class="prev">
+            <a href="#">
+                <img src="img/left_arrow.png" alt="left arrow">
+            </a>
+        </div>
+        <div class="next">
+            <a href="#">
+                <img src="img/right_arrow.png" alt="right arrow">
+            </a>
+        </div>
+        <div class="close">
+            <a href="#">
+                <img src="img/close_btn.png" alt="close">
+            </a>
+        </div>
+    </div>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.js"></script>
+    <!-- <script src="js/book.js"></script> -->
+    <script>
+        var Page = (function () {
+
+            var config = {
+                $bookBlock: $('#bb-bookblock'),
+                $navNext: $('#bb-nav-next'),
+                $navPrev: $('#bb-nav-prev'),
+                $navFirst: $('#bb-nav-first'),
+                $navLast: $('#bb-nav-last')
+            },
+                init = function () {
+                    config.$bookBlock.bookblock({
+                        speed: 800,
+                        shadowSides: 0.8,
+                        shadowFlip: 0.7
+                    });
+                    initEvents();
+                },
+                initEvents = function () {
+
+                    var $slides = config.$bookBlock.children();
+
+                    // add navigation events
+                    config.$navNext.on('click touchstart', function () {
+                        config.$bookBlock.bookblock('next');
+                        return false;
+                    });
+
+                    config.$navPrev.on('click touchstart', function () {
+                        config.$bookBlock.bookblock('prev');
+                        return false;
+                    });
+
+                    config.$navFirst.on('click touchstart', function () {
+                        config.$bookBlock.bookblock('first');
+                        return false;
+                    });
+
+                    config.$navLast.on('click touchstart', function () {
+                        config.$bookBlock.bookblock('last');
+                        return false;
+                    });
+
+                    // add swipe events
+                    $slides.on({
+                        'swipeleft': function (event) {
+                            config.$bookBlock.bookblock('next');
+                            return false;
+                        },
+                        'swiperight': function (event) {
+                            config.$bookBlock.bookblock('prev');
+                            return false;
+                        }
+                    });
+
+                    // add keyboard events
+                    $(document).keydown(function (e) {
+                        var keyCode = e.keyCode || e.which,
+                            arrow = {
+                                left: 37,
+                                up: 38,
+                                right: 39,
+                                down: 40
+                            };
+
+                        switch (keyCode) {
+                            case arrow.left:
+                                config.$bookBlock.bookblock('prev');
+                                break;
+                            case arrow.right:
+                                config.$bookBlock.bookblock('next');
+                                break;
+                        }
+                    });
+                };
+
+            return { init: init };
+
+        })();
+    </script>
+    <script>
+        Page.init();
+    </script>
+</body>
+
+</html>

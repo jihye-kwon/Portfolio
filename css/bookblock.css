@@ -1,0 +1,305 @@
+.bb-bookblock {
+	width: 100%;
+	height: 90%;
+	margin: 0 auto;
+	position: relative;
+	z-index: 100;
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bb-page {
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+}
+
+.bb-vertical .bb-page {
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.bb-horizontal .bb-page {
+	width: 100%;
+	height: 50%;
+	top: 50%;
+	-webkit-transform-origin: center top;
+	-moz-transform-origin: center top;
+	transform-origin: center top;
+}
+
+.bb-page > div,
+.bb-outer,
+.bb-content,
+.bb-inner {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	/* background: #fff; */
+	/* background-color:rgba(255,255,255, 0.05); */
+}
+
+/*custom*/
+.bb-page > div > div,
+.bb-outer > div,
+.bb-content > div,
+.bb-inner > div {
+    /* display:flex; */
+    /* background-color:rgba(255,255,255, 0.05); */
+    /* padding:3vw; */
+    padding:0;
+    box-sizing:border-box;    
+}
+
+
+.bb-page > div h3 ,
+.bb-outer h3,
+.bb-content h3,
+.bb-inner h3 {
+	color:#51ced3; margin-top:2vw; font-size:1.5vw;
+}
+.bb-page > div .book_img ,
+.bb-outer .book_img,
+.bb-content .book_img,
+.bb-inner .book_img { width:70%; margin:0 auto; }
+
+.bb-page > div .book_des,
+.bb-outer .book_des,
+.bb-content .book_des,
+.bb-inner .book_des {
+    line-height:2vw; 
+    margin-left:5vw;
+    color:#030c19;
+}
+.bb-page > div .book_des .line,
+.bb-outer .book_des .line,
+.bb-content .book_des .line,
+.bb-inner .book_des .line {
+    display:flex;
+    padding:0.5vw 0;
+	text-align: left;
+}
+.bb-page > div .book_des .line div:first-child,
+.bb-outer .book_des .line div:first-child,
+.bb-content .book_des .line div:first-child,
+.bb-inner .book_des .line div:first-child { width:7vw;}
+
+.bb-page > div .book_des .line div:last-child,
+.bb-outer .book_des .line div:last-child,
+.bb-content .book_des .line div:last-child,
+.bb-inner .book_des .line div:last-child { display:flex;}
+
+.bb-page > div .book_des .line div p,
+.bb-outer .book_des .line div p,
+.bb-content .book_des .line div p,
+.bb-inner .book_des .line div p {
+    width:20px;
+    height:20px;
+    border-radius:100%;
+    margin:0.3vw 0.5vw 0 0;
+    padding:0;
+}
+.bb-page > div .book_des .line img,
+.bb-outer .book_des .line img,
+.bb-content .book_des .line img,
+.bb-inner .book_des .line img {
+    height:1vw;
+    margin-top:0.3vw;
+}
+.bb-page > div .book_des .line div .blank,
+.bb-outer .book_des .line div .blank,
+.bb-content .book_des .line div .blank,
+.bb-inner .book_des .line div .blank { margin-left:2vw;}
+
+.bb-page > div .book_btn,
+.bb-outer .book_btn,
+.bb-content .book_btn,
+.bb-inner .book_btn { display:flex; margin-top:2.5vw;}
+
+.bb-page > div .book_btn a ,
+.bb-outer .book_btn a,
+.bb-content .book_btn a,
+.bb-inner .book_btn a {
+    width:7vw;
+    height:2vw;
+    border:1px solid #030c19;
+    color:#030c19;
+    border-radius:30px;
+    text-align:center;
+    line-height:1.5vw;
+    font-size:0.7vw;
+    padding:0.3vw;
+    margin-right:1vw;
+}
+.bb-page > div .book-btn a:hover,
+.bb-outer .book-btn a:hover,
+.bb-content .book-btn a:hover,
+.bb-inner .book-btn a:hover { background-color:rgba(255,255,255, 0.05); color:#b7e3ca;}
+
+
+
+.bb-vertical .bb-content {
+	width: 200%;
+}
+
+.bb-horizontal .bb-content {
+	height: 200%;
+}
+
+.bb-page > div {
+	width: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.bb-page > div:not(:only-child) {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bb-vertical .bb-back {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.bb-horizontal .bb-back {
+	-webkit-transform: rotateX(-180deg);
+	-moz-transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
+}
+
+.bb-outer {
+	width: 100%;
+	overflow: hidden;
+	z-index: 999;
+}
+
+.bb-overlay, 
+.bb-flipoverlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.bb-flipoverlay {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* */
+
+.bb-bookblock.bb-vertical > div.bb-page:first-child,
+.bb-bookblock.bb-vertical > div.bb-page:first-child .bb-back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.bb-bookblock.bb-horizontal > div.bb-page:first-child,
+.bb-bookblock.bb-horizontal > div.bb-page:first-child .bb-back {
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+/* Content display */
+.bb-vertical .bb-front .bb-content {
+	left: -100%;
+}
+
+.bb-horizontal .bb-front .bb-content {
+	top: -100%;
+}
+
+/* Flipping classes */
+.bb-vertical .bb-flip-next,
+.bb-vertical .bb-flip-initial {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.bb-vertical .bb-flip-prev {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+.bb-horizontal .bb-flip-next,
+.bb-horizontal .bb-flip-initial {
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+.bb-horizontal .bb-flip-prev {
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.bb-vertical .bb-flip-next-end {
+	-webkit-transform: rotateY(-15deg);
+	-moz-transform: rotateY(-15deg);
+	transform: rotateY(-15deg);
+}
+
+.bb-vertical .bb-flip-prev-end {
+	-webkit-transform: rotateY(-165deg);
+	-moz-transform: rotateY(-165deg);
+	transform: rotateY(-165deg);
+}
+
+.bb-horizontal .bb-flip-next-end {
+	-webkit-transform: rotateX(15deg);
+	-moz-transform: rotateX(15deg);
+	transform: rotateX(15deg);
+}
+
+.bb-horizontal .bb-flip-prev-end {
+	-webkit-transform: rotateX(165deg);
+	-moz-transform: rotateX(165deg);
+	transform: rotateX(165deg);
+}
+
+.bb-item {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	background: rgba(255,255,255,0.5);
+}
+
+/* No JS */
+.no-js .bb-bookblock, 
+.no-js ul.bb-custom-grid li {
+	width: auto;
+	height: auto;
+}
+
+.no-js .bb-item {
+	display: block;
+	position: relative;
+}
