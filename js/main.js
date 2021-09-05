@@ -40,21 +40,26 @@ $(function () {
                 if (index == 1) {
                     $('.s2 .box > div').removeClass('active');
                     setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
                 }
                 //2번째 section 에서 자식 콘텐츠에 active설정
                 if (index == 2) {
                     $('.s2 .box > div').addClass('active');
                     //1초 기다렸다가 barAnimation 함수 호출 (1번 실행)
                     setTimeout(barAnimation, 1000);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
                 } if (index == 3) {
                     $('.s2 .box > div').removeClass('active');
                     setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
                 } if (index == 4) {
                     $('.s2 .box > div').removeClass('active');
                     setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
                 } if (index == 5) {
                     $('.s2 .box > div').removeClass('active');
                     setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').addClass('active');
                 }
 
             }
