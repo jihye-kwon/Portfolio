@@ -117,8 +117,22 @@ header nav ul {
     justify-content:space-between;
 }
 header nav ul .cancle { width:2vw; margin-top:-0.5vw; transition:all 0.4s;}
+header nav ul li { position:relative;}
 header nav ul li a { font-size:1vw; transition:all 0.5s; color:#fff;}
-header nav ul li a.active { color:#030c19;}
+header nav ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 0%;
+    height: 9px;
+    background-color: rgba(255,255,255,0.3);
+    transform: skew(-20deg);
+    transition: 0.4s;
+    z-index: 100;
+}
+header nav ul li a:hover:after{ width:100%;}
+header nav ul li a.active { color:#31B1CF;}
 header .mo_btn { display:none;}
 header .mo_nav { display:none;}
 
@@ -417,7 +431,7 @@ header .mo_nav { display:none;}
 .s5 .box .con_wrap > div { box-sizing:border-box; padding:0.5vw 1.5vw 0;}
 .s5 .box .con_wrap .con_left { width:40%;}
 .s5 .box .con_wrap .con_left .con_left_text { 
-    margin-top:2vw;
+    margin-top:2.5vw;
     text-transform:uppercase;
     text-align:center;
     width:100%;
@@ -428,7 +442,7 @@ header .mo_nav { display:none;}
     transition:all 0.5s;
 }
 .s5 .box .con_wrap .con_left .con_left_text p.active {
-    font-size:1vw; 
+    font-size:1.2vw; 
     text-transform:uppercase;
     font-weight:500;
     color:#030c19;
@@ -439,12 +453,21 @@ header .mo_nav { display:none;}
     animation: text 3s 1;
     opacity:1;
 }
+.s5 .box .con_wrap .con_left .con_left_me { border-radius:3vw; background-color:rgba(183,227,202,0.2);}
+.s5 .box .con_wrap .con_left .con_left_me p {
+    margin:3.5vw 0;
+    color:#030c19;
+    text-align:center;
+    line-height:1.7vw;
+    letter-spacing:2px;
+    font-size:1vw;
+}
 
 .s5 .box .con_wrap .con_left .con_left_text2 { margin:1vw 0; color:#030c19; text-align: center; letter-spacing:2px;}
 .s5 .box .con_wrap .con_left .con_left_text2 p { padding:0.2vw;}
 .s5 .box .con_wrap .con_left .con_left_text2 p a { text-shadow:1px 2px 4px rgba(183,227,202,0.7);}
 .s5 .box .con_wrap .con_left .con_left_text2 p a:hover { color:#51ced3;}
-.s5 .box .con_wrap .con_right{ width:50%;}
+.s5 .box .con_wrap .con_right{ width:50%; margin:2vw 0;}
 
 /* popup */
 .popup {
@@ -485,4 +508,16 @@ header .mo_nav { display:none;}
     height:60px;
     top:20px;
     right:20px;
+}
+/* 노트북 버전 */
+@media screen and (max-width:1600px){
+
+}
+/* 태블릿 버전 */
+@media screen and (max-width:1280px){
+
+}
+/* 모바일 버전 */
+@media screen and (max-width:480px){
+    
 }
