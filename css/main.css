@@ -132,7 +132,7 @@ header nav ul li a:after {
     z-index: 100;
 }
 header nav ul li a:hover:after{ width:100%;}
-header nav ul li a.active { color:#31B1CF;}
+header nav ul li a.active { color:#030c19;}
 header .mo_btn { display:none;}
 header .mo_nav { display:none;}
 
@@ -519,5 +519,5 @@ header .mo_nav { display:none;}
 }
 /* 모바일 버전 */
 @media screen and (max-width:480px){
-    
+
 }
