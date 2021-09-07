@@ -70,7 +70,7 @@
 .bb-outer h3,
 .bb-content h3,
 .bb-inner h3 {
-	color:#51ced3; margin-top:2vw; font-size:1.5vw;
+	color:#030c19; margin-top:2vw; font-size:1.5vw;
 }
 .bb-page > div .book_img ,
 .bb-outer .book_img,
@@ -289,7 +289,7 @@
 	top: 0;
 	left: 0;
 	display: none;
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.1);
 }
 
 /* No JS */

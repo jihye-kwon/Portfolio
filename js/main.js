@@ -3,6 +3,8 @@ $(function () {
     //fullpage
     if (winWidth >= 1000) {
         $('#fullpage').fullpage({
+            loopTop:true,
+            loopBottom:true,
             menu: '#menu',
             lockAnchors: false,
             anchors: ['Intro', 'Profile', 'Web', 'Editable', 'Contact'],
@@ -17,7 +19,7 @@ $(function () {
                     $('#fp-nav ul li a span').addClass('active');
                     $('#fp-nav ul li .fp-tooltip').addClass('active');
                     $('.s4 h1').addClass('active');
-                    $('.cancle a img').attr('src', 'img/close_navy.png');
+                    $('.cancle').css('background-image', 'url(img/close_navy.png)');
                     $('.logo img:nth-child(1)').attr('src', 'img/logo_box1_navy.png');
                     $('.logo img:nth-child(2)').attr('src', 'img/logo_box2_navy.png');
                     $('.logo img:nth-child(3)').attr('src', 'img/logo1_navy.png');
@@ -29,7 +31,7 @@ $(function () {
                     $('#fp-nav ul li a span').removeClass('active');
                     $('#fp-nav ul li .fp-tooltip').removeClass('active');
                     $('.s4 h1').removeClass('active');
-                    $('.cancle a img').attr('src', 'img/close_w.png');
+                    $('.cancle').css('background-image', 'url(img/close_w.png)');
                     $('.logo img:nth-child(1)').attr('src', 'img/logo_box1_w.png');
                     $('.logo img:nth-child(2)').attr('src', 'img/logo_box2_w.png');
                     $('.logo img:nth-child(3)').attr('src', 'img/logo1_w.png');
@@ -226,4 +228,17 @@ $(function () {
         container.empty();
     });
 
+    //cancel버튼을 클릭하면 nav ul 이 나오고, 다시 cancel버튼을 클릭하면 nav ul이 들어감
+    var sw=0;
+    $('.cancle').click(function(){
+        if(sw===0){
+            sw=1;
+            $('header > nav > ul').animate({'left':'0vw'});
+            $(this).css('background-position','center left');
+        }else{
+            sw=0;
+            $('header > nav > ul').animate({'left':'60vw'});
+            $(this).css('background-position','center right');
+        }
+    });
 });
