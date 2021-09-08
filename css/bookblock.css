@@ -70,21 +70,42 @@
 .bb-outer h3,
 .bb-content h3,
 .bb-inner h3 {
-	color:#030c19; margin-top:2vw; font-size:1.5vw;
-}
-.bb-page > div .book_img ,
+	color:#ddd; margin-top:2vw; font-size:1.5vw;}
+.bb-page > div .book_img,
 .bb-outer .book_img,
 .bb-content .book_img,
-.bb-inner .book_img { width:70%; margin:0 auto; }
+.bb-inner .book_img { width:90%; margin:0 auto; }
+.bb-page > div .b_img1,
+.bb-outer .b_img1,
+.bb-content .b_img1,
+.bb-inner .b_img1,
+.bb-page > div .b_img2,
+.bb-outer .b_img2,
+.bb-content .b_img2,
+.bb-inner .b_img2 { width:65%;}
+.bb-page > div .b_img4,
+.bb-outer .b_img4,
+.bb-content .b_img4,
+.bb-inner .b_img4 { width:75%; margin-left:7.5vw;}
 
 .bb-page > div .book_des,
 .bb-outer .book_des,
 .bb-content .book_des,
 .bb-inner .book_des {
     line-height:2vw; 
-    margin-left:5vw;
-    color:#030c19;
+    margin-left:3vw;
+    color:#dedede;
 }
+.bb-page > div .book_img ,
+.bb-outer .book_img,
+.bb-content .book_img,
+.bb-inner .book_img,
+.bb-page > div .book_des,
+.bb-outer .book_des,
+.bb-content .book_des,
+.bb-inner .book_des { height:90%; position:relative; top:55%; transform:translateY(-50%);}
+
+
 .bb-page > div .book_des .line,
 .bb-outer .book_des .line,
 .bb-content .book_des .line,
@@ -96,7 +117,7 @@
 .bb-page > div .book_des .line div:first-child,
 .bb-outer .book_des .line div:first-child,
 .bb-content .book_des .line div:first-child,
-.bb-inner .book_des .line div:first-child { width:7vw;}
+.bb-inner .book_des .line div:first-child { width:7.2vw;}
 
 .bb-page > div .book_des .line div:last-child,
 .bb-outer .book_des .line div:last-child,
@@ -113,13 +134,10 @@
     margin:0.3vw 0.5vw 0 0;
     padding:0;
 }
-.bb-page > div .book_des .line img,
-.bb-outer .book_des .line img,
-.bb-content .book_des .line img,
-.bb-inner .book_des .line img {
-    height:1vw;
-    margin-top:0.3vw;
-}
+.line div .noto { font-family: 'Noto Sans KR', sans-serif;}
+.line div .nanum { font-family: 'Nanum Gothic', sans-serif;}
+.line div .onepop { font-family: 'ONE-Mobile-POP';}
+.line div .jal { font-family: 'today';}
 .bb-page > div .book_des .line div .blank,
 .bb-outer .book_des .line div .blank,
 .bb-content .book_des .line div .blank,
@@ -136,8 +154,8 @@
 .bb-inner .book_btn a {
     width:7vw;
     height:2vw;
-    border:1px solid #030c19;
-    color:#030c19;
+    border:1px solid #dedede;
+    color:#dedede;
     border-radius:30px;
     text-align:center;
     line-height:1.5vw;
@@ -148,7 +166,7 @@
 .bb-page > div .book-btn a:hover,
 .bb-outer .book-btn a:hover,
 .bb-content .book-btn a:hover,
-.bb-inner .book-btn a:hover { background-color:rgba(255,255,255, 0.05); color:#b7e3ca;}
+.bb-inner .book-btn a:hover { background-color:#dedede; color:#030c19;}
 
 
 
@@ -289,7 +307,7 @@
 	top: 0;
 	left: 0;
 	display: none;
-	background: rgba(255,255,255,0.1);
+	/* background: rgba(255,255,255,0.1); */
 }
 
 /* No JS */

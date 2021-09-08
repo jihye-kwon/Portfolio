@@ -1,5 +1,5 @@
 
-.s5 label { color:#030c19;}
+.s5 label { color:#dedede;}
 textarea {
   width: 100%;
 }
@@ -13,6 +13,7 @@ textarea {
   text-align: center;
 }
 .button-success {
+  width:100%;
   color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -25,7 +26,7 @@ button {
   float: right;
 }
 #name, #email {
-  width: 50%;
+  width: 100%;
 }
 .honeypot-field {
   display: none;
