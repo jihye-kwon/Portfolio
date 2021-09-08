@@ -190,7 +190,7 @@ $(function () {
 
     //popup gallery
     var imgBtn=$('.s4 .box .grid_img .container1 a');
-    var gallTotal=$('.s4 .box .grid_img .container1 div').length;
+    var gallTotal=$('.s4 .box .grid_img .container1 > div').length;
     var popup=$('.popup');
     var container=$('.popup .container2');
     var gallNum=0;
