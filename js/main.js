@@ -3,8 +3,8 @@ $(function () {
     //fullpage
     if (winWidth >= 1000) {
         $('#fullpage').fullpage({
-            loopTop:true,
-            loopBottom:true,
+            loopTop: true,
+            loopBottom: true,
             menu: '#menu',
             lockAnchors: false,
             anchors: ['Intro', 'Profile', 'Web', 'Editable', 'Contact'],
@@ -23,9 +23,7 @@ $(function () {
                     $('.logo img:nth-child(1)').attr('src', 'img/logo_box1_navy.png');
                     $('.logo img:nth-child(2)').attr('src', 'img/logo_box2_navy.png');
                     $('.logo img:nth-child(3)').attr('src', 'img/logo1_navy.png');
-                    $('.mo_logo img:nth-child(1)').attr('src', 'img/logo_box1_navy.png');
-                    $('.mo_logo img:nth-child(2)').attr('src', 'img/logo_box2_navy.png');
-                    $('.mo_logo img:nth-child(3)').attr('src', 'img/logo1_navy.png');
+                    
                 } else {
                     $('header nav ul li a').removeClass('active');
                     $('#fp-nav ul li a span').removeClass('active');
@@ -35,9 +33,7 @@ $(function () {
                     $('.logo img:nth-child(1)').attr('src', 'img/logo_box1_w.png');
                     $('.logo img:nth-child(2)').attr('src', 'img/logo_box2_w.png');
                     $('.logo img:nth-child(3)').attr('src', 'img/logo1_w.png');
-                    $('.mo_logo img:nth-child(1)').attr('src', 'img/logo_box1_w.png');
-                    $('.mo_logo img:nth-child(2)').attr('src', 'img/logo_box2_w.png');
-                    $('.mo_logo img:nth-child(3)').attr('src', 'img/logo1_w.png');
+                    
                 }
                 if (index == 1) {
                     $('.s2 .box > div').removeClass('active');
@@ -50,15 +46,18 @@ $(function () {
                     //1초 기다렸다가 barAnimation 함수 호출 (1번 실행)
                     setTimeout(barAnimation, 1000);
                     $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
-                } if (index == 3) {
+                }
+                if (index == 3) {
                     $('.s2 .box > div').removeClass('active');
                     setTimeout(barStop, 100);
                     $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
-                } if (index == 4) {
+                }
+                if (index == 4) {
                     $('.s2 .box > div').removeClass('active');
                     setTimeout(barStop, 100);
                     $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
-                } if (index == 5) {
+                }
+                if (index == 5) {
                     $('.s2 .box > div').removeClass('active');
                     setTimeout(barStop, 100);
                     $('.s5 .box .con_wrap .con_left .con_left_text p').addClass('active');
@@ -66,13 +65,70 @@ $(function () {
 
             }
         });
+    }else{
+        $('#fullpage').fullpage({
+            loopTop:true,
+            loopBottom:true,
+            anchors: ['Intro', 'Profile', 'Web', 'Editable', 'Contact'],
+            afterLoad: function ( anchorLink, index, direction){
+                if (index == 4) {
+                    $('header nav ul li a').addClass('active');
+                    $('#fp-nav ul li a span').addClass('active');
+                    $('#fp-nav ul li .fp-tooltip').addClass('active');
+                    $('.s4 h1').addClass('active');
+                    $('.mo_logo img:nth-child(1)').attr('src', 'img/logo_box1_navy.png');
+                    $('.mo_logo img:nth-child(2)').attr('src', 'img/logo_box2_navy.png');
+                    $('.mo_logo img:nth-child(3)').attr('src', 'img/logo1_navy.png');
+                    $('#hamburger span').css('background','#030c19');
+                } else {
+                    $('header nav ul li a').removeClass('active');
+                    $('#fp-nav ul li a span').removeClass('active');
+                    $('#fp-nav ul li .fp-tooltip').removeClass('active');
+                    $('.s4 h1').removeClass('active');
+                    $('.mo_logo img:nth-child(1)').attr('src', 'img/logo_box1_w.png');
+                    $('.mo_logo img:nth-child(2)').attr('src', 'img/logo_box2_w.png');
+                    $('.mo_logo img:nth-child(3)').attr('src', 'img/logo1_w.png');
+                    $('#hamburger span').css('background','#efefef');
+                }
+                if (index == 1) {
+                    $('.s2 .box > div').removeClass('active');
+                    setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
+                }
+                //2번째 section 에서 자식 콘텐츠에 active설정
+                if (index == 2) {
+                    $('.s2 .box > div').addClass('active');
+                    //1초 기다렸다가 barAnimation 함수 호출 (1번 실행)
+                    setTimeout(barAnimation, 1000);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
+                }
+                if (index == 3) {
+                    $('.s2 .box > div').removeClass('active');
+                    setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
+                }
+                if (index == 4) {
+                    $('.s2 .box > div').removeClass('active');
+                    setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').removeClass('active');
+                }
+                if (index == 5) {
+                    $('.s2 .box > div').removeClass('active');
+                    setTimeout(barStop, 100);
+                    $('.s5 .box .con_wrap .con_left .con_left_text p').addClass('active');
+                }
+            }
+        });
     }
     //skills bar
     function barAnimation() {
         $('.skillbar').each(function () {
-            $(this).find('.skillbar-bar').animate({ width: jQuery(this).attr('data-percent') }, 2000);
+            $(this).find('.skillbar-bar').animate({
+                width: jQuery(this).attr('data-percent')
+            }, 2000);
         });
     }
+
     function barStop() {
         $('.skillbar').each(function () {
             $(this).find(".skillbar-bar").animate({
@@ -80,8 +136,6 @@ $(function () {
             }, 2000)
         });
     }
-    
-    
 
     //cursor
     const cursor = document.querySelector('.cursor');
@@ -109,6 +163,15 @@ $(function () {
             cursor.classList.remove("focus");
         });
 
+    });
+
+    //swiper
+    var swiper = new Swiper(".mySwiper", {
+        loop:true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 
     //canvas star
@@ -172,6 +235,7 @@ $(function () {
         }
     }
     var stars = []
+
     function init() {
         for (let i = 0; i < n_stars; i++) {
             stars.push(new Star())
@@ -189,45 +253,92 @@ $(function () {
     animate()
 
     //popup gallery
-    var imgBtn=$('.s4 .box .grid_img .container1 a');
-    var gallTotal=$('.s4 .box .grid_img .container1 > div').length;
-    var popup=$('.popup');
-    var container=$('.popup .container2');
-    var gallNum=0;
+    var imgBtn = $('.s4 .box .grid_img .container1 a');
+    var gallTotal = $('.s4 .box .grid_img .container1 > div').length;
+    var popup = $('.popup');
+    var container = $('.popup .container2');
+    var gallNum = 0;
 
-    imgBtn.click(function(e){
+    imgBtn.click(function (e) {
         e.preventDefault();
         //마우스로 클릭한 a태그의 href속성 값을 가져와서 attr변수에 저장
-        var attr=$(this).attr('href');
+        var attr = $(this).attr('href');
         console.log(attr);
         //<img src="img/gallery1.jpg"> 문장을 완성해서 container영역에 자식객체로 추가시킴 
-        container.append('<img src="'+attr+'">');
-        popup.css('display','block');
+        container.append('<img src="' + attr + '">');
+        popup.css('display', 'block');
     });
-    
+
     //popup gallery next btn
-    $('.popup .next').click(function(){
+    $('.popup .next').click(function () {
         gallNum++;
-        if(gallNum > gallTotal) { gallNum=1;}
+        if (gallNum > gallTotal) {
+            gallNum = 1;
+        }
         container.empty();
-        container.append('<img src="img/editable'+gallNum+'.png">');   
+        container.append('<img src="img/editable' + gallNum + '.png">');
     });
-    
+
     //popup gallery prev btn
-    $('.popup .prev').click(function(){
+    $('.popup .prev').click(function () {
         gallNum--;
-        if(gallNum < 1 ) { gallNum=gallTotal;}
+        if (gallNum < 1) {
+            gallNum = gallTotal;
+        }
         container.empty();
-        container.append('<img src="img/editable'+gallNum+'.png">');
+        container.append('<img src="img/editable' + gallNum + '.png">');
     });
 
     //popup gallery close btn
-    $('.close').click(function(){
-        popup.css('display','none');
+    $('.close').click(function () {
+        popup.css('display', 'none');
         //container안의 내용 비움
         container.empty();
     });
 
+    //hanmburger menu
+    var estado = 0,
+        vw = $(window).width();
+    $("#hamburger").click(function () {
+        var delay_time = 0;
+        $(this).toggleClass('open');
+        console.log(estado);
+        if (estado === 0) {
+            TweenMax.to($("#bg-menu-mobile"), 1, {
+                x: -vw,
+                ease: Expo.easeInOut
+            });
+            $("li").each(function () {
+                TweenMax.to($(this), 1.2, {
+                    x: -vw,
+                    scaleX: 1,
+                    delay: delay_time,
+                    ease: Expo.easeInOut
+                });
+                delay_time += .04;
+            });
+            estado = 1;
+        } else {
+            estado = 0;
+            TweenMax.to($("#bg-menu-mobile"), 1.2, {
+                x: 0,
+                ease: Expo.easeInOut
+            });
+            $("li").each(function () {
+                TweenMax.to($(this), 1, {
+                    x: 0,
+                    x:vw,
+                    scaleX: 2.3,
+                    delay: delay_time,
+                    ease: Expo.easeInOut
+                });
+                delay_time -= .02;
+            });
+        }
+    });
+    $('.mo_btn .mobile #menu-mobile ul li').click(function(){
+        $("#hamburger").click();
+    });
     //cancel버튼을 클릭하면 nav ul 이 나오고, 다시 cancel버튼을 클릭하면 nav ul이 들어감
     var sw=0;
     $('.cancle').click(function(){
@@ -241,4 +352,5 @@ $(function () {
             $(this).css('background-position','center right');
         }
     });
+    
 });

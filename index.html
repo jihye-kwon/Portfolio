@@ -28,6 +28,8 @@
     <script src="js/jquery.fullpage.js"></script>
     <script src="js/swiper-bundle.js"></script>
     <script src="js/form-submission-handler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modernizr.custom.js"></script>
 
@@ -35,17 +37,17 @@
 
 <body>
     <canvas></canvas>
-    <div class="cursor"></div>
+    <div class="cursor pc"></div>
     <div class="wrap">
         <header>
-            <div class="logo">
+            <div class="logo pc">
                 <a href="index.html">
                     <img src="img/logo_box1_w.png" alt="logo box" class="logo_box1">
                     <img src="img/logo_box2_w.png" alt="logo box" class="logo_box2">
                     <img src="img/logo1_w.png" alt="logo" class="logo_img">
                 </a>
             </div>
-            <nav>
+            <nav class="pc">
                 <ul>
                     <li><a href="#Intro">Intro</a></li>
                     <li><a href="#Profile">Profile</a></li>
@@ -57,38 +59,39 @@
             </nav>
 
             <!-- 햄버거 메뉴 버튼(모바일) -->
-            <div class="mo_btn">
-                <a href="#">
-                    <img src="img/menu_btn.png" alt="menu_btn">
-                </a>
-            </div>
-            <!-- 모바일에서 햄버거 메뉴 버튼 클릭하면 나타나는 메뉴 -->
-            <div class="mo_nav">
-                <div class="mo_logo">
-                    <a href="index.html">
+            <div class="mo_btn mo">
+                <div class="mobile">
+                    <a href="index.html" class="mo_logo">
                         <img src="img/logo_box1_w.png" alt="logo box" class="logo_box1">
                         <img src="img/logo_box2_w.png" alt="logo box" class="logo_box2">
                         <img src="img/logo1_w.png" alt="logo" class="logo_img">
                     </a>
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="menu-mobile">
+                        <div id="bg-menu-mobile"></div>
+                        <ul>
+                            <li><a href="#Intro">Intro</a></li>
+                            <li><a href="#Profile">Profile</a></li>
+                            <li><a href="#Web">Web Portfolio</a></li>
+                            <li><a href="#Editable">Editable Portfolio</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="#Intro">Intro</a></li>
-                        <li><a href="#Profile">Profile</a></li>
-                        <li><a href="#Web">Web Portfolio</a></li>
-                        <li><a href="#Editable">Editable Portfolio</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                        <li class="cancle"><a href="#"><img src="img/close_w.png" alt="닫기"></a></li>
-                    </ul>
-                </nav>
+                
             </div>
+
         </header>
         <div id="fullpage">
             <section class="section s1">
                 <p>‘ Let's always do our best and give thanks~! ’</p>
                 <h2>
                     &lt; 안녕하세요. 신입 웹퍼블리셔 <span>&quot;권지혜&quot;</span> 입니다. &gt;<br>
-                    { Hi. I’m Newcomer Web - Publisher Ji Hye Kwon. }
+                    { Hi. I’m Newcomer Web - Publisher <span>&quot;Ji Hye Kwon</span>. }
                 </h2>
             </section>
             <section class="section s2">
@@ -125,7 +128,7 @@
                     </div>
                     <div class="skills">
                         <h3>My Skills</h3>
-                        <div class="skill_box">
+                        <div class="skill_box pc">
                             <div class="container">
                                 <p class="wide">PHOTOSHOP</p>
                                 <div class="back skillbar clearfix" data-percent="95%">
@@ -146,7 +149,7 @@
                                 </div>
                             </div>
                             <div class="container">
-                                <p class="wide">JAVASCRIPT<br>& JQUERY</p>
+                                <p class="wide pc">JAVASCRIPT<br>& JQUERY</p>
                                 <div class="back skillbar clearfix" data-percent="70%">
                                     <div class="skill skillbar-bar" style="height:2vw;width:0%">70%</div>
                                 </div>
@@ -176,13 +179,64 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="skill_box mo">
+                            <div class="container">
+                                <p class="wide">PHOTOSHOP</p>
+                                <div class="back skillbar clearfix" data-percent="95%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%;">95%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">ILLUSTRATOR</p>
+                                <div class="back skillbar clearfix" data-percent="90%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%;">90%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">HTML5+CSS3</p>
+                                <div class="back skillbar clearfix" data-percent="90%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%">90%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide mo">JAVASCRIPT & JQUERY</p>
+                                <div class="back skillbar clearfix" data-percent="70%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%">70%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">PHP</p>
+                                <div class="back skillbar clearfix" data-percent="75%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%">75%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">GNUBOARD</p>
+                                <div class="back skillbar clearfix" data-percent="75%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%">75%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">VUE.JS</p>
+                                <div class="back skillbar clearfix" data-percent="60%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%">60%</div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <p class="wide">REACT</p>
+                                <div class="back skillbar clearfix" data-percent="40%">
+                                    <div class="skill skillbar-bar" style="height:4vw;width:0%">40%</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="section s3">
                 <h1>[ Web Portfolio ]</h1>
                 <div class="box">
-                    <div class="book bb-custom-wrapper">
+                    <div class="book bb-custom-wrapper pc">
                         <div id="bb-bookblock" class="bb-bookblock">
                             <div class="bb-item">
                                 <h3>노엘로힐즈</h3>
@@ -430,11 +484,239 @@
                             <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
                             <a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
                         </nav>
-                    </div>
-                </div>
+                    </div><!-- book -->
+                    <div class="swiper mySwiper mo">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <img src="img/mockup1.png" alt="첫번째 포폴">
+                                </div>
+                                <div class="swiper-des">
+                                    <h3>노엘로힐즈</h3>
+                                    <div class="swiper-des-detail">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;bxSlider</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #ffffff;"></p><span>#ffffff</span>
+                                                <p style="background: #f3a821;" class="blank"></p><span>#f3a821</span>
+                                                <p style="background: #5c5b58;" class="blank"></p><span>#5c5b58</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<b class="nanum">Nanum Gothic</b></div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div>
+                                            <div>:&nbsp;&nbsp;1주일</div>
+                                        </div>
+                                    </div><!-- swiper-des-detail -->
+                                    <div class="swiper-btn">
+                                        <a href="https://noelohills.com/">Original</a>
+                                        <a href="http://smilecherry.dothome.co.kr">PC Renewal</a>
+                                        <!-- <a href="http://smilecherry.dothome.co.kr">Mobile</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <img src="img/mockup2.png" alt="두번째 포폴">
+                                </div>
+                                <div class="swiper-des">
+                                    <h3>스타일난다</h3>
+                                    <div class="swiper-des-detail">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;php + splideSlider + bxSlider + slickSlider</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #ffffff;"></p><span>#ffffff</span>
+                                                <p style="background: #222222;" class="blank"></p><span>#222222</span>
+                                                <p style="background: #999999;" class="blank"></p><span>#999999</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<b class="noto">Noto Sans KR</b></div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div>
+                                            <div>:&nbsp;&nbsp;2주일</div>
+                                        </div>
+                                    </div><!-- swiper-des-detail -->
+                                    <div class="swiper-btn">
+                                        <a href="https://stylenanda.com/">Original</a>
+                                        <a href="http://smilecherry.dothome.co.kr/stylenanda/">PC Renewal</a>
+                                        <a href="http://smilecherry.dothome.co.kr/stylenanda/sub_new.php" target="_blank">Sub page</a>
+                                        <!-- <a href="http://smilecherry.dothome.co.kr">Mobile</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <img src="img/mockup3.png" alt="세번째 포폴">
+                                </div>
+                                <div class="swiper-des">
+                                    <h3>핑크스터프</h3>
+                                    <div class="swiper-des-detail">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 버전 + 태블릿 버전 + 모바일 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;Bootstrap + jquery-easing + mediaquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #f160ad;"></p><span>#f160ad</span>
+                                                <p style="background: #ffffff;" class="blank"></p><span>#ffffff</span>
+                                                <p style="background: #ecd2b2;" class="blank"></p><span>#ecd2b2</span>
+                                                <p style="background: #e7d859;" class="blank"></p><span>#e7d859</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<b class="onepop">원스토어 모바일 POP체</b>&nbsp;+&nbsp;</b class="noto">Noto Sans KR</b>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div><br>
+                                            <div>:&nbsp;&nbsp;1주일</div>
+                                        </div>
+                                    </div><!-- swiper-des-detail -->
+                                    <div class="swiper-btn">
+                                        <a href="https://www.pinkstuff.co.kr/" target="_blank">Original</a>
+                                            <a href="http://smilecherry.dothome.co.kr/pinkstuff/" target="_blank">PC Renewal</a>
+                                            <a href="#" onclick="window.open('http://smilecherry.dothome.co.kr/pinkstuff/','mobile_window','width=480,height=960,top=0,left=600,toolbar=no menubar=,scrollbar=no,resizable=no')">Mobile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <img src="img/mockup4.png" alt="네번째 포폴">
+                                </div>
+                                <div class="swiper-des">
+                                    <h3>던킨도너츠</h3>
+                                    <div class="swiper-des-detail">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;모바일 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery.mobile</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;swiperSlider</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #372317;"></p><span>#372317</span>
+                                                <p style="background: #ffffff;" class="blank"></p><span>#ffffff</span>
+                                                <p style="background: #c1ae96;" class="blank"></p><span>#c1ae96</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<b class="jal">잘풀리는 오늘 TTP</b></div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div><br>
+                                            <div>:&nbsp;&nbsp;1주일</div>
+                                        </div>
+                                    </div><!-- swiper-des-detail -->
+                                    <div class="swiper-btn">
+                                        <a href="#"
+                                                onclick="window.open('http://www.dunkindonuts.co.kr/','mobile_window','width+480,height=960,top=0,left=600,toolbar=0,menubar=no,scrollbar=no,resizable=no')">Original</a>
+                                            <!-- <a href="http://smilecherry.dothome.co.kr/pinkstuff/">PC Renewal</a> -->
+                                            <a href="#"
+                                                onclick="window.open('https://jihye-kwon.github.io/dunkin/','mobile_window','width=480,height=960,top=0,left=600,toolbar=no,menubar=no,scrollbar=no,resizable=no')">Mobile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <img src="img/mockup5.png" alt="다섯번째 포폴">
+                                </div>
+                                <div class="swiper-des">
+                                    <h3>더카페</h3>
+                                    <div class="swiper-des-detail">
+                                        <div class="line">
+                                            <div>기기 지원&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;PC 번전 + 노트북 버전 + 태블릿 버전 + 모바일 버전</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 Skill&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;HTML5 + CSS3 + jquery</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>사용 plugin&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;fullpage</div>
+                                        </div>
+                                        <div class="line">
+                                            <div>메인 색상&nbsp; </div>
+                                            <div>:&nbsp;
+                                                <p style="background: #412a24;"></p><span>#412a24</span>
+                                                <p style="background: #ffffff;" class="blank"></p><span>#ffffff</span>
+                                                <p style="background: #fdc53e;" class="blank"></p><span>#fdc53e</span>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                            <div>폰트 style&nbsp; </div>
+                                            <div>:&nbsp;&nbsp;<b class="jal">잘풀리는 오늘 TTP</b>&nbsp;+&nbsp;<b class="noto">Noto Sans KR</b></div>
+                                        </div>
+                                        <div class="line">
+                                            <div>제작 기간</div><br>
+                                            <div>:&nbsp;&nbsp;3주일</div>
+                                        </div>
+                                    </div><!-- swiper-des-detail -->
+                                    <div class="swiper-btn">
+                                        <a href="http://www.thecaffe.co.kr/" target="_blank">Original</a>
+                                            <a href="https://jihye-kwon.github.io/thecaffe/" target="_blank">PC Renewal</a>
+                                            <a href="#"
+                                                onclick="window.open('https://jihye-kwon.github.io/thecaffe/','mobile_window','width=480,height=960,top=0,left=600,toolbar=no,menubar=no,scrollbar=no,resizable=no')">Mobile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- swiper -->
+                </div><!-- box -->
             </section>
             <section class="section s4">
-                <h1>[ Editable Portfolio ] <span>&(plz).click(!!);</span></h1>
+                <h1 class="pc">[ Editable Portfolio ] <span>&(plz).click(!!);</span></h1>
+                <h1 class="mo">[ Editable Portfolio ]</h1>
                 <div class="box">
                     <div class="grid_img">
                         <div>
@@ -479,8 +761,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div><!-- grid -->
+                </div><!-- box -->
             </section>
             <section class="section s5">
                 <h1>[ Contact Me ]</h1>
@@ -521,9 +803,14 @@
                                         <input id="name" name="name" placeholder="What your Mom calls you" />
                                     </fieldset>
 
-                                    <fieldset class="pure-group">
+                                    <fieldset class="pure-group pc">
                                         <label for="message">내용(Message) : </label>
                                         <textarea id="message" name="message" rows="10"
+                                            placeholder="Tell us what's on your mind..."></textarea>
+                                    </fieldset>
+                                    <fieldset class="pure-group mo">
+                                        <label for="message">내용(Message) : </label>
+                                        <textarea id="message" name="message" rows="3"
                                             placeholder="Tell us what's on your mind..."></textarea>
                                     </fieldset>
 
@@ -559,7 +846,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div><!-- box -->
             </section>
             <section class="section  fp-auto-height">
                 <footer>

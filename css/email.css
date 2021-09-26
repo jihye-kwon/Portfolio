@@ -30,4 +30,18 @@ button {
 }
 .honeypot-field {
   display: none;
+}    
+.pc { display:block;}
+.mo { display:none;}
+
+@media screen and (max-width:480px) {
+  .pc { display:none;}
+  .mo { display:block;}
+  .s5 label { 
+    font-size:3vw;
+    margin-top:-2vw;
+  }
+  .pure-form .pure-group input, .pure-form .pure-group textarea {
+    padding:0.5vw;
+  }
 }
